@@ -1,0 +1,5 @@
+
+<view class="search-body flex align-center justify-between">
+    <input type="text" bindinput="changeSearchKey" placeholder-class="text-white" placeholder="告诉周公你梦到了什么" confirm-type="search" bindconfirm="searchTap" />
+    <tui-icon name='search' color="#fff" class="padding-right" bindtap="searchTap" size="24"></tui-icon>
+</view>

@@ -1,0 +1,10 @@
+page{
+  /* position: fixed; */
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(-180deg, #0E128D 1%, #0B1068 55%);
+}
+.box{
+  background: #2328bb;
+  height: 400rpx;
+}

@@ -1,0 +1,80 @@
+<view class="container">
+  <view class="inner">
+    <!-- wishes panel -->
+    <view class="wishes-panel">
+      <image class="bg" src="https://7765-weixindemo-pw3dn-1300152060.tcb.qcloud.la/wishes/wishes-panel.png?sign=df86fa1c132bd032a097ad2bbffaa6af&t=1602385715"></image>
+      
+      <!-- custom card -->
+      <block wx:if="{{state === '0'}}">
+        <view bindtap="bindViewTap">
+          <view class="userinfo">
+            <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+          </view>
+          <view class="to-name">
+            <text>祝 {{toname}} :</text>
+          </view>
+          <view class="best-wishes">
+            <text>{{sentence}}</text>
+          </view>
+          <view class="from-name">
+            <text wx:if="{{state === '0'}}">{{fromname?fromname:userInfo.nickName}}</text>
+            <text wx:if="{{state === '1'}}">{{fromname}}</text>
+          </view>
+          <view class="date">
+            <text>{{today}}</text>
+          </view>
+        </view>
+      </block>
+
+      <!-- receive card -->
+      <block wx:if="{{state === '1'}}">
+        <view class="userinfo">
+          <image class="userinfo-avatar" src="{{fromavatar}}" background-size="cover"></image>
+        </view>
+        <view class="to-name">
+          <text>祝 {{toname}} :</text>
+        </view>
+        <view class="best-wishes">
+          <text>{{sentence}}</text>
+        </view>
+        <view class="from-name">
+          <text>{{fromname}}</text>
+        </view>
+        <view class="date">
+          <text>{{sentday}}</text>
+        </view>
+      </block>
+    </view>
+
+    <!-- btns -->
+    <view class="btns">
+      <block wx:if="{{state === '0'}}">
+        <button class="change-btn" bindtap="changeOne">换一个</button><button class="finish-btn margin-left" bindtap="shareTips">送祝福</button>
+      </block>
+      <block wx:if="{{state === '1'}}">
+        <button class="custom-btn" bindtap="customCard">制作我的祝福话</button>
+      </block>
+    </view>
+  </view>
+
+  <view class="overlay center" wx:if="{{!showCustomHint}}" bindtap="confirmCustomHint">
+    <view class="overlay-inner">
+      <view class="center-block">
+        <image class="hand" src="https://7765-weixindemo-pw3dn-1300152060.tcb.qcloud.la/wishes/tap.png?sign=8dda1d8e52d6c6283ccd3249b7234a7e&t=1602385727"></image>
+        <text>点击卡片文本可以编辑祝福信息</text>
+      </view>
+      <button hover-class="btn-hover">我知道了</button>
+    </view>
+  </view>
+</view>
+
+
+<div class="overlay" wx:if="{{showOverlay}}" bindtap="hideOverlay">
+  <image class="tips" src="https://7765-weixindemo-pw3dn-1300152060.tcb.qcloud.la/wishes/share-tips.png?sign=74b08cbbe9cb4050859a51cfbd7d9293&t=1602385738"></image>
+</div>
+<tui-modal show="{{showModel}}"  custom="{{true}}" padding="{{0}}" width="400rpx" height='300rpx'>
+  <view class="tui-modal-custom bg-white radius-20 padding flex flex-direction justify-around">
+      <view class="text-center">授权获取【头像昵称】</view>
+      <button class="text-sm text-center radius-10 padding-tb-sm padding-lr bg-blue" open-type="getUserInfo" bindgetuserinfo="getUserInfo">立即授权</button>
+  </view>
+</tui-modal>   

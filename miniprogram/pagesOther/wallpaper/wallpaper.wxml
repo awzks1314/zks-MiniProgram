@@ -1,0 +1,12 @@
+<view class="box" scroll-x bindscrolltolower='change'>
+  <image src="{{url}}" style="width:100%;height:100%;" show-menu-by-longpress></image>
+  <view class="btn flex align-center justify-around">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="name" class="padding-tb padding-lr-lg radius-30 bg-blue">
+      <view class="picker">
+        {{array[index].name}}
+      </view>
+    </picker>
+    <view class="padding-tb padding-lr-lg radius-30 bg-blue" bindtap='save'>保存</view>
+    <view class="padding-tb padding-lr-lg radius-30 bg-blue" bindtap='getImg'>换一张</view>
+  </view>
+</view>

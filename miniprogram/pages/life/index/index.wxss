@@ -1,0 +1,11 @@
+/* birth.wxss */
+.text{
+  margin: 60px auto;
+  text-align: center;
+  line-height: 2.5em;
+  color: #72777b;
+}
+.title{
+  font-size: 1.3rem;
+  line-height: 3em;
+}

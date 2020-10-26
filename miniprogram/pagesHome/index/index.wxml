@@ -1,0 +1,57 @@
+<view class="padding-lg">
+  <view class="bg-white shadow padding radius-10" wx:if="{{type=='author'}}">  
+    <view class="head  flex align-center flex-direction justify-center">
+        <view class='img-size-120 round margin-bottom-sm' style="overflow:hidden;" bindtap="changeHead">
+          <image src="{{url}}" class="img-size-120"></image>
+        </view>
+    </view>
+    <view class="text-center padding-tb-sm text-bold">搞文艺的猿</view>
+    <view class="text-center padding-tb-sm">web前端开发工程师</view>
+    <view class="text-center padding-tb-sm">男 23岁 2年工作经验</view>
+    <view class="padding-tb-sm flex align-center justify-between" style="padding-left:16%;padding-right:16%;">
+      <view class="flex align-center" bindtap="open" data-type="wechat">
+        <tui-icon name='wechat' size="20" color="#0081ff"></tui-icon>
+        <text class="padding-left-sm">微信</text>
+      </view>
+      <view class="flex align-center" bindtap="open" data-type="qq">
+        <tui-icon name='qq' size="20" color="#0081ff"></tui-icon>
+        <text class="padding-left-sm">QQ</text>
+      </view>
+      <view class="flex align-center" bindtap="open" data-type="gong">
+        <tui-icon name='service-fill' size="20" color="#0081ff"></tui-icon>
+        <text class="padding-left-sm">公众号</text>
+      </view>
+    </view>
+    <view class="text-indent margin-top borderT padding-top">
+      我是一名资深代码搬运工程师，咳咳，CV工程师。为了学习云开发，开始了【小小工具君】的编写。嗐，就是闲着没事做，写了这个小程序。
+    </view>
+    <view class="margin-top-sm text-indent">
+      技术栈么，有点杂。前端(html、h5、css、js、jq、bootstrap、react、vue)、公众号、小程序、数据库(Oracle、MySQL、SQL Server、MongoDB)，嗐，都是基本啥的。然后java会一点点，python写写脚本爬虫啥的(目前三天打鱼两天晒网的学习中)、操作系统(Windows、Linux)会一点点(大学学过)、ps会一点点，做做海报啥的、呃呃呃还有啥来着，想不起来了，先这样吧。(ｷ｀ﾟДﾟ´)!!
+    </view>
+    <view class="margin-top-sm text-indent">
+      大家有啥想看的，想了解的都可以留言告诉我。不然我都是看心情和意境来写的(ಥ_ಥ) ，也欢迎大家给我提意见或建议，谢谢！
+    </view>
+  </view>
+  <view class="bg-white shadow  radius-10" wx:if="{{type=='money'}}">  
+    <tui-tabs tabs="{{title}}" height='100'  sliderBgColor='#0081ff'  selectedColor='#0081ff' currentTab="{{currentTab}}" bold='true' bind:change="change" itemWidth="50%"></tui-tabs>
+    <view class="flex align-center justify-center padding-top-lg">
+      <image src="https://7765-weixindemo-pw3dn-1300152060.tcb.qcloud.la/myimg/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202010221649333.jpg?sign=60b9b8b550527feb137b154a55995bc9&t=1603417936" wx:if='{{currentTab==0}}' show-menu-by-longpress class="immg"></image>
+      <image src="https://7765-weixindemo-pw3dn-1300152060.tcb.qcloud.la/myimg/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202010221649334.jpg?sign=b6adc918d302705061a4880e76239c8f&t=1603417971" wx:if='{{currentTab==1}}' show-menu-by-longpress class="immg"></image>
+    </view>
+  </view>
+  <view class="bg-white shadow padding radius-10" wx:if="{{type=='thank'}}">  
+    <view class="height70 text-bold text-blue">特别感谢</view>
+    <view class="height70 text-gray">高德地图</view>
+    <view class="height70 text-gray">和风天气平台</view>
+    <view class="height70 text-gray">百度AI开放平台</view>
+    <view class="height70 text-gray">天行数据平台</view>
+    <view class="height70 text-gray">点睛数据平台</view>
+    <view class="height70 text-gray">极速数据平台</view>
+    <view class="height70 text-gray">阿里巴巴矢量库</view>
+    <view class="height70 text-gray">……</view>
+  </view>
+  <!--底部分享弹窗-->
+  <!-- <tui-bottom-popup show="{{imgShow}}" bind:close="popup" height='800'>
+    <image src="{{img}}" mode="aspectFit"></image>
+  </tui-bottom-popup> -->
+</view>

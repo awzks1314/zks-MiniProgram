@@ -1,0 +1,21 @@
+<view class=" padding-lg text-white" >
+  <view class="margin-top-lg flex flex-direction align-center justify-center">
+    <text>2021年是人生的转折点，最有望咸鱼翻身！</text>
+    <text class="margin-top-sm">不同的名字都预示着不同的运势</text>
+  </view>
+  <view class=" flex flex-direction align-center justify-center text-xxxl" style="margin-top:100rpx;">
+    <text >测一测</text>
+    <text class="margin-top">你的牛年运势</text>
+  </view>
+  <view class="bg-fff1 padding" style="margin-top:200rpx;">
+    <view class="box flex flex-direction ">
+      <view class="flex flex-sub flex-direction justify-center align-center">
+        <text class="text-bold text-xl">请输入您的名字</text>
+        <input class="bg-white round margin-tb-lg padding-lr-lg text-center" style="height:80rpx;" bindinput="getValue"></input>
+        <tui-tag type='warning' bindtap='getUserFortune'>测一测</tui-tag>
+      </view>
+      <text class="text-center">点击上方【测一测】按钮，查看你的牛年运势</text>
+    </view>
+  </view>
+  <view class="text-center" style="padding-top:80rpx;">开发者：zks</view>
+</view>

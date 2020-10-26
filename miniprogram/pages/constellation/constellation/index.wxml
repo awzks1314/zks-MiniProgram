@@ -1,0 +1,8 @@
+
+<view class="flex flex-wrap align-center justify-center aa" >
+  <view wx:for='{{list}}' wx:key='id' class="listw flex flex-direction align-center justify-center" bindtap="gotoDetail" data-id="{{item.id}}">
+    <image src="https://7765-weixindemo-pw3dn-1300152060.tcb.qcloud.la/xingzuo/{{item.id}}.png?sign=53235aefab7f1526940145f5c980448d&t=1602385809" class="img-size-160 "></image>
+    <text class="text-bold ">{{item.name}}</text>
+    <text class="text-qianBlue">{{item.time}}</text>
+  </view>
+</view>

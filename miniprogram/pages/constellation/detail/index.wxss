@@ -1,0 +1,12 @@
+/* miniprogram/pages/constellation/detail/index.wxss */
+page{
+  padding: 30rpx;
+  background: #423a4f;
+}
+.box{
+  position: relative;
+}
+
+.width50{
+  width: 50%
+}

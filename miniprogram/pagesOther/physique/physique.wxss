@@ -1,0 +1,54 @@
+.HeadBox{
+  height: 500rpx;
+  position: relative;
+}
+.li{
+  background:rgba(250, 250, 250, .2);
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.inp{
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #e2e2e2;
+}
+.iborder{
+  width: 50%;
+  height:60rpx;
+  border: 1rpx solid #d9d9d9;
+  border-radius: 6rpx;
+  background-color: #f1f1f1;
+  text-align: right;
+  padding-right: 8rpx;
+}
+
+.table{
+  border: 1rpx solid #e2e2e2;
+}
+
+.table .row{
+  display: flex;
+  border-bottom: 1rpx solid #e2e2e2;
+  line-height: 60rpx;
+  height: 60rpx;
+}
+
+.table .row .col{
+  flex: 1;
+  text-align: center;
+  border-right: 1rpx solid #e2e2e2;
+}
+
+.table .thead{
+  background-color: #0081ff;
+  color:#f1f1f1;
+}
+
+.table .row .col:last-child{
+  border-right: 0rpx;
+}
+
+.table .row:last-child{
+   border-bottom: 0rpx;
+}

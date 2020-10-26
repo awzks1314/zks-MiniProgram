@@ -1,0 +1,40 @@
+<view class="padding-lg bg-white radius-20">
+  <view class="flex align-center justify-between padding-bottom-lg">
+    <text>性别</text>
+    <view class="flex align-center">
+        <text bindtap="circle" data-index="1">男</text>
+        <tui-icon name="{{circleIndex == 1?'circle-fill':'circle'}}" size='21' bindtap="circle" color="#0081ff" data-index="1" class="margin-right-sm"></tui-icon>
+        <text bindtap="circle" data-index="2">女</text>
+        <tui-icon name="{{circleIndex == 2?'circle-fill':'circle'}}" size='21' bindtap="circle" color="#0081ff" data-index="2" class="margin-right-sm"></tui-icon>
+        <text bindtap="circle" data-index="3">中性</text>
+        <tui-icon name="{{circleIndex == 3?'circle-fill':'circle'}}" size='21' bindtap="circle" color="#0081ff" data-index="3"></tui-icon>
+    </view>
+  </view>
+  <view class="flex align-center justify-between padding-bottom-lg">
+    <text>生成数量</text>
+    <view class="flex align-center justify-center">
+      <view class="img-size-60 flex align-center justify-center {{num<=1?'bg-gray':'bg-blue'}} round text-lg" bindtap="reduce" >-</view>
+      <view class="img-size-60 flex align-center justify-center bg-gray margin-lr text-lg">{{num>0?num:1}}</view>
+      <view class="img-size-60 flex align-center justify-center {{num>=50?'bg-gray':'bg-blue'}} round text-lg" bindtap="add"  >+</view>
+    </view>
+  </view>
+  <view class="flex align-center justify-between padding-bottom-lg">
+    <text>字数</text>
+    <view class="flex align-center">
+        <view class=" padding-lr padding-tb-sm {{number == 2 ?'bg-blue':'bg-gray'}} margin-right" bindtap="changeNumber" data-number="2">2</view>
+        <view class=" padding-lr padding-tb-sm {{number == 3 ?'bg-blue':'bg-gray'}} " bindtap="changeNumber" data-number="3">3</view>
+    </view>
+  </view>
+  <view class="flex align-center justify-between padding-bottom-lg">
+    <text>包含字</text>
+    <input bindinput="getValue" class="border text-right" placeholder="输入包含名字" maxlength="{{number - 1}}" ></input>
+  </view>
+  <view class="flex justify-center align-center" bindtap="startBename">
+    <tui-tag>开始取名</tui-tag>
+  </view>
+</view>
+
+<view class="padding-lg radius-20 bg-white margin-top flex flex-wrap" wx:if='{{List}}'>
+  <view wx:for='{{List}}' wx:key='index'  class="widthLi text-center padding-tb-sm">{{item.naming}}
+  </view>
+</view>

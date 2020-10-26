@@ -1,0 +1,132 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"scopeDataCheck": false,
+		"coverView": true,
+		"es6": true,
+		"postcss": true,
+		"compileHotReLoad": false,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"autoAudits": false,
+		"newFeature": true,
+		"uglifyFileName": false,
+		"uploadWithSourceMap": true,
+		"useIsolateContext": true,
+		"nodeModules": false,
+		"enhance": true,
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false,
+		"showShadowRootInWxmlPanel": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.11.0",
+	"appid": "wxb5c272511865e088",
+	"projectname": "%E6%9C%89%E7%94%A8%E5%8A%A9%E6%89%8B",
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+	"watchOptions": {
+		"ignore": []
+	},
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"scripts": {},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"current": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pagesOther/literature/index/index",
+					"pathName": "pagesOther/literature/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pagesOther/watermark/watermark",
+					"pathName": "pagesOther/watermark/watermark",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/home",
+					"pathName": "pages/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pagesOther/university/university",
+					"pathName": "pagesOther/university/university",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pagesOther/university/comparison/comparison",
+					"pathName": "pagesOther/university/comparison/comparison",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pagesBaidu/newYear/newYear",
+					"pathName": "pagesBaidu/newYear/newYear",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "pagesOther/wallpaper/wallpaper",
+					"pathName": "pagesOther/wallpaper/wallpaper",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "pagesHome/mobileInfo/mobileInfo",
+					"pathName": "pagesHome/mobileInfo/mobileInfo",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

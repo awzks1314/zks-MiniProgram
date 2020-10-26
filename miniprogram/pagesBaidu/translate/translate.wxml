@@ -1,0 +1,32 @@
+ 
+<view>
+  <textarea class="shadow2 padding radius-10"  style="width:100%!important;min-height:360rpx;" placeholder='请输入翻译内容(1000字以内)' value='{{query}}' bindinput="getValue" fixed='true' maxlength="1000"></textarea>  
+</view>
+<view class="text-center padding-tb-sm">
+  <tui-icon name='down' color="rgba(0,0,0,.3)" size="24"></tui-icon>
+</view>
+<scroll-view scroll-x class="box flex align-center" scroll-left='{{scrollLeft}}'>
+  <view wx:for='{{list}}' class="li margin-right-sm" wx:key='index' bindtap="changeIndex" data-index="{{index}}" data-str="{{item.string}}">
+    <!-- <text>{{item.name}}</text> -->
+    <tui-tag type="{{currentIndex == index?'primary':'gray'}}">{{item.name}}</tui-tag>
+  </view>
+</scroll-view>
+<view class="text-center ">
+  <tui-icon name='down' color="rgba(0,0,0,.3)" size="24"></tui-icon>
+</view>
+<view class="flex justify-center" >
+  <tui-tag bindtap="tanslate">翻译</tui-tag>
+  <tui-tag bindtap="rest" class='padding-left'>重置</tui-tag>
+</view>
+<view wx:if='{{resultList.length>0}}'>
+  <view class="text-center " >
+    <tui-icon name='down' color="rgba(0,0,0,.3)" size="24"></tui-icon>
+  </view>
+  <view class="padding shadow2 radius-10" style="min-height:360rpx;">
+  <text wx:for='{{resultList}}' wx:key='index' class="">{{item.dst}}</text>
+  </view>
+  <view class="text-center " >
+    <tui-icon name='down' color="rgba(0,0,0,.3)" size="24"></tui-icon>
+    <tui-tag bindtap="tanslate" bindtap='copy'>复制</tui-tag>
+  </view>
+</view>

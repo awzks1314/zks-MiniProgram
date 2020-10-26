@@ -1,0 +1,26 @@
+page{
+  background: #fafafa;
+  padding: 20rpx;
+}
+.inputValue {
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20rpx;
+  border-bottom: 2rpx solid #eee;
+  color: #0094ff;
+}
+.inputValue input,
+.inputValue picker {
+  font-size: 30rpx;
+  margin-left: 20rpx;
+  flex: 1;
+}
+.bu{
+  padding: 20rpx;
+  font-size: 28rpx;
+  border-radius: 6rpx;
+  line-height: 28rpx;
+  border: none;
+}

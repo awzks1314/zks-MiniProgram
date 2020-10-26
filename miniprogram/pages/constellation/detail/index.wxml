@@ -1,0 +1,111 @@
+
+<view class=" bg-white padding radius-10" wx:if="{{info == 'l'}}">
+  <view class="padding-lg flex align-center justify-center">
+    <text>查不到数据，返回首页联系开发者吧~</text>
+  </view>
+</view>
+<view class=" bg-white padding radius-10" wx:if="{{info && info !='l'}}">
+  <view class=" flex justify-around">
+    <view class="box flex align-center flex-direction justify-end align-center">
+      <image src="https://7765-weixindemo-pw3dn-1300152060.tcb.qcloud.la/xingzuo/{{id}}.png?sign=53235aefab7f1526940145f5c980448d&t=1602385809" class="img-size-160 "></image>
+      <view class="text-blue text-bold text-lg ">{{info.astroname}}</view>
+    </view>
+    <view class="flex flex-direction ">
+      <text class="text-grey text-sm">今日运势({{info.today.date}})</text>
+      <text class="text-bold text-sm padding-tb">综合运势：</text>
+      <view class="">
+        <tui-icon name='like-fill' size="24" color="{{info.today.summary>=0.01?'#f9bd80':'#e6e6e6'}}" class="margin-right-sm"> </tui-icon>
+        <tui-icon name='like-fill' size="24" color="{{info.today.summary>=0.02?'#f9bd80':'#e6e6e6'}}" class="margin-right-sm"> </tui-icon>
+        <tui-icon name='like-fill' size="24" color="{{info.today.summary>=0.03?'#f9bd80':'#e6e6e6'}}" class="margin-right-sm"> </tui-icon>
+        <tui-icon name='like-fill' size="24" color="{{info.today.summary>=0.04?'#f9bd80':'#e6e6e6'}}" class="margin-right-sm"> </tui-icon>
+        <tui-icon name='like-fill' size="24" color="{{info.today.summary>=0.05?'#f9bd80':'#e6e6e6'}}" class="margin-right-sm"> </tui-icon>
+      </view>
+    </view>
+  </view>
+  <view class="margin-top-lg flex flex-wrap padding-bottom-lg">
+    <view class="flex align-center width50 padding-top">
+      <text class="text-gray">财运运势</text>
+      <view class="padding-left-sm padding-right-sm flex flex-sub justify-between ">
+        <tui-icon name='like-fill' size="16" color="{{info.today.money>=0.01?'#f9bd80':'#e6e6e6'}}" class=""> </tui-icon>
+        <tui-icon name='like-fill' size="16" color="{{info.today.money>=0.02?'#f9bd80':'#e6e6e6'}}" class=""> </tui-icon>
+        <tui-icon name='like-fill' size="16" color="{{info.today.money>=0.03?'#f9bd80':'#e6e6e6'}}" class=""> </tui-icon>
+        <tui-icon name='like-fill' size="16" color="{{info.today.money>=0.04?'#f9bd80':'#e6e6e6'}}" class=""> </tui-icon>
+        <tui-icon name='like-fill' size="16" color="{{info.today.money>=0.05?'#f9bd80':'#e6e6e6'}}" class=""> </tui-icon>
+      </view>
+    </view>
+    <view class="flex align-center width50 padding-top">
+      <text class="text-gray">工作运势</text>
+      <view class="padding-left-sm padding-right-sm flex flex-sub justify-between ">
+        <tui-icon name='like-fill' size="16" color="{{info.today.career>=0.01?'#f9bd80':'#e6e6e6'}}" class=""> </tui-icon>
+        <tui-icon name='like-fill' size="16" color="{{info.today.career>=0.02?'#f9bd80':'#e6e6e6'}}" class=""> </tui-icon>
+        <tui-icon name='like-fill' size="16" color="{{info.today.career>=0.03?'#f9bd80':'#e6e6e6'}}" class=""> </tui-icon>
+        <tui-icon name='like-fill' size="16" color="{{info.today.career>=0.04?'#f9bd80':'#e6e6e6'}}" class=""> </tui-icon>
+        <tui-icon name='like-fill' size="16" color="{{info.today.career>=0.05?'#f9bd80':'#e6e6e6'}}" class=""> </tui-icon>
+      </view>
+    </view>
+    <view class="flex align-center width50 padding-top">
+      <text class="text-gray">爱情运势</text>
+      <view class="padding-left-sm padding-right-sm flex flex-sub justify-between">
+        <tui-icon name='like-fill' size="16" color="{{info.today.love>=0.01?'#f9bd80':'#e6e6e6'}}" class=""> </tui-icon>
+        <tui-icon name='like-fill' size="16" color="{{info.today.love>=0.02?'#f9bd80':'#e6e6e6'}}" class=""> </tui-icon>
+        <tui-icon name='like-fill' size="16" color="{{info.today.love>=0.03?'#f9bd80':'#e6e6e6'}}" class=""> </tui-icon>
+        <tui-icon name='like-fill' size="16" color="{{info.today.love>=0.04?'#f9bd80':'#e6e6e6'}}" class=""> </tui-icon>
+        <tui-icon name='like-fill' size="16" color="{{info.today.love>=0.05?'#f9bd80':'#e6e6e6'}}" class=""> </tui-icon>
+      </view>
+    </view>
+    <view class="flex align-center width50 padding-top">
+      <text class="text-gray">健康运势</text>
+      <view class="padding-left-sm padding-right-sm flex flex-sub justify-between">
+        <tui-icon name='like-fill' size="16" color="{{info.today.health>=0.01?'#f9bd80':'#e6e6e6'}}" class=""> </tui-icon>
+        <tui-icon name='like-fill' size="16" color="{{info.today.health>=0.02?'#f9bd80':'#e6e6e6'}}" class=""> </tui-icon>
+        <tui-icon name='like-fill' size="16" color="{{info.today.health>=0.03?'#f9bd80':'#e6e6e6'}}" class=""> </tui-icon>
+        <tui-icon name='like-fill' size="16" color="{{info.today.health>=0.04?'#f9bd80':'#e6e6e6'}}" class=""> </tui-icon>
+        <tui-icon name='like-fill' size="16" color="{{info.today.health>=0.05?'#f9bd80':'#e6e6e6'}}" class=""> </tui-icon>
+      </view>
+    </view>
+    <view class="flex align-center width50 padding-top">
+      <text class="text-gray">贵人星座</text>
+      <view class="padding-left-sm padding-right-sm flex flex-sub justify-between">
+        {{info.today.star}}
+      </view>
+    </view>
+    <view class="flex align-center width50 padding-top">
+      <text class="text-gray">幸运数字</text>
+      <view class="padding-left-sm padding-right-sm flex flex-sub justify-between">
+        {{info.today.number}}
+      </view>
+    </view>
+    <view class="flex align-center width50 padding-top">
+      <text class="text-gray">幸运颜色</text>
+      <view class="padding-left-sm padding-right-sm flex flex-sub justify-between">
+        {{info.today.color}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 大块 -->
+  <view class="margin-top" wx:if='{{info.today.presummary}}'>
+    <view class="text-blue text-lg text-bold margin-bottom">概述</view>
+    <view>{{info.today.presummary}}</view>
+  </view>
+  <view class="margin-top" wx:if='{{info.week.presummary}}'>
+    <view class="text-blue text-lg text-bold margin-bottom">综合运势</view>
+    <view>{{info.week.presummary}}</view>
+  </view>
+  <view class="margin-top"  wx:if='{{info.week.love}}'>
+    <view class="text-blue text-lg text-bold margin-bottom">爱情运势</view>
+    <view>{{info.week.love}}</view>
+  </view>
+  <view class="margin-top"  wx:if='{{info.week.money}}'>
+    <view class="text-blue text-lg text-bold margin-bottom">财运运势</view>
+    <view>{{info.week.money}}</view>
+  </view>
+  <view class="margin-top" wx:if='{{info.week.career}}'>
+    <view class="text-blue text-lg text-bold margin-bottom">工作运势</view>
+    <view>{{info.week.career}}</view>
+  </view>
+  <view class="margin-top" wx:if='{{info.week.health}}'>
+    <view class="text-blue text-lg text-bold margin-bottom">健康运势</view>
+    <view>{{info.week.health}}</view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+<view class="padding">
+  <view wx:for='{{list}}' wx:key='index' class="padding margin-bottom shadow2">
+    <view>{{item.lsdate}}</view>
+    <rich-text nodes='{{item.title}}'></rich-text>
+  </view>
+</view>

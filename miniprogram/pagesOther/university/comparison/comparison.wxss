@@ -1,0 +1,20 @@
+.lii{
+  width: 28%;
+}
+.li{
+  width: 24%;
+}
+.heig{
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 10rpx;
+}
+
+.topLi{
+  background: #fafafa;
+  border-top: 2rpx solid #e8e8e8;
+}
+.bottomRight{
+  border-bottom: 2rpx solid #e8e8e8;
+  border-right: 2rpx solid #e8e8e8;
+}

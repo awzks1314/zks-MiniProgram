@@ -1,0 +1,18 @@
+<view class='padding flex align-center justify-center flex-direction'>
+  <picker mode="selector"  range='{{list}}'  bindchange="bindDateChange" class="padding-tb ">      
+    <view>
+      你的星座：<text class="text-blue">{{index?index:'请选择'}}</text> 
+    </view>
+  </picker> 
+  <picker mode="selector"  range='{{lists}}'  bindchange="bindDateChange1">      
+    <view>
+      匹配星座：<text class="text-blue">{{indexs?indexs:'请选择'}}</text> 
+    </view>
+  </picker> 
+  <tui-tag class='margin-top-lg' wx:if='{{index && indexs}}' bindtap='startTest'>开始测试</tui-tag>
+</view>
+<view class="broder-top padding-tb text-lg" wx:for='{{infoList}}' wx:key='index'> 
+  <view class="padding-tb-sm text-bold  text-indent">{{item.title}}</view>
+  <rich-text nodes='{{item.grade}}' class="text-indent"></rich-text>
+  <rich-text nodes='{{item.content}}' class="text-indent"></rich-text>
+</view>

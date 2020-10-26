@@ -1,0 +1,8 @@
+
+<view class='nav-list padding'>
+  <navigator hover-class='none' url="{{item.link}}" class="nav-li bg-{{item.color}}" wx:for="{{routers}}" wx:key='index'>
+    <view class="nav-title">{{item.name}}</view>
+    <view class="nav-name">{{item.title}}</view>
+    <!-- <tui-icon name='shop' class="nav-l" size="22" color="#fff"></tui-icon> -->
+  </navigator>   
+</view>

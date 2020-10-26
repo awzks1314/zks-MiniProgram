@@ -1,0 +1,36 @@
+<view class=''>
+    <navBar title='{{title}}' background='{{background}}' color='#FFF' backgroundColorTop='rgba(255,255,255,0)'  back="{{true}}" home="{{true}}" iconTheme='white' bindback="handlerGobackClick" bindhome="handlerGohomeClick"></navBar>
+</view>
+<image class="background-image blur" src="https://7765-weixindemo-pw3dn-1300152060.tcb.qcloud.la/weather/1.jpg?sign=fdc3bb349ba7d4e66e8b484dd21696ee&t=1602385557"></image>
+<view class="search-bodys flex align-center justify-between" >
+    <input type="text" bindinput="changeSearchKey" placeholder-class="text-white" placeholder="输入您要查询的内容" confirm-type="search" bindconfirm="searchTap" />
+    <tui-icon name='search' color="#fff" class="padding-right" bindtap="searchTap" size="24"></tui-icon>
+</view>
+
+<view class="padding-lg" wx:if='{{info}}'>
+  <view class="bg-fff1 padding radius-20 text-white">
+    <view class="padding-tb">查询结果：</view>
+    <view wx:if='{{type==2}}'>
+      <view class="padding-tb">省份：{{info.province}}</view>
+      <view class="padding-tb">城市：{{info.city}}</view>
+      <view class="padding-tb">运营商：{{info.isp}}</view>
+      <view class="padding-tb">手机号：{{info.phone_num}}</view>
+    </view>
+    <view wx:if='{{type==1}}'>
+      <view class="padding-tb">性别：{{info.Sex}}</view>
+      <view class="padding-tb">年龄：{{info.Years}}</view>
+      <view class="padding-tb">生日：{{info.Birthday}}</view>
+      <view class="padding-tb">星座：{{info.XingZuo}}</view>
+      <view class="padding-tb">出生地：{{info.CityName}}</view>
+    </view>
+    <view wx:if='{{type==4}}'>
+      <view class="padding-tb">大洲：{{info.continent}}</view>
+      <view class="padding-tb">国家：{{info.country}}</view>
+      <view class="padding-tb">城市：{{info.address[0].p}}</view>
+      <view class="padding-tb">省份：{{info.address[0].c}}</view>
+      <view class="padding-tb">区县：{{info.address[0].d}}</view>
+      <view class="padding-tb">经度：{{info.address[0].j}}</view>
+      <view class="padding-tb">维度：{{info.address[0].w}}</view>
+    </view>
+  </view>
+</view>

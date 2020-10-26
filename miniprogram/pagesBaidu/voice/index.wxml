@@ -1,0 +1,38 @@
+<view>
+  <textarea class="border padding radius-10"  style="width:100%!important;min-height:360rpx; border: 1rpx solid #f1f1f1" placeholder='请输入文本内容(600字以内)' value='{{query}}' bindinput="getValue" fixed='true' maxlength="600"></textarea>  
+</view>
+<view class="padding-tb flex align-center ">
+  <text>语速：</text>
+  <view class="flex align-center justify-center">
+    <view class="img-size-60 flex align-center justify-center {{spd==1?'bg-gray':'bg-blue'}} round  text-lg" bindtap="reduce" data-type="spd">-</view>
+    <view class="img-size-60 flex align-center justify-center bg-gray margin-lr text-lg">{{spd}}</view>
+    <view class="img-size-60 flex align-center justify-center {{spd>=15?'bg-gray':'bg-blue'}} round text-lg" bindtap="add" data-type="spd">+</view>
+  </view>
+</view>
+<view class="padding-tb flex align-center ">
+  <text>语调：</text>
+  <view class="flex align-center justify-center">
+    <view class="img-size-60 flex align-center justify-center {{pit==1?'bg-gray':'bg-blue'}} round text-lg" bindtap="reduce" data-type="pit">-</view>
+    <view class="img-size-60 flex align-center justify-center bg-gray margin-lr text-lg">{{pit}}</view>
+    <view class="img-size-60 flex align-center justify-center {{pit>=15?'bg-gray':'bg-blue'}} round text-lg" bindtap="add" data-type="pit">+</view>
+  </view>
+</view>
+<view class="padding-tb flex align-center ">
+  <text>音量：</text>
+  <view class="flex align-center justify-center">
+    <view class="img-size-60 flex align-center justify-center {{vol==1?'bg-gray':'bg-blue'}} round text-lg" bindtap="reduce" data-type="vol">-</view>
+    <view class="img-size-60 flex align-center justify-center bg-gray margin-lr text-lg">{{vol}}</view>
+    <view class="img-size-60 flex align-center justify-center {{vol>=15?'bg-gray':'bg-blue'}} round text-lg" bindtap="add" data-type="vol" >+</view>
+  </view>
+</view>
+
+<view class=" flex align-center ">
+  <text>人物：</text>
+  <view class="padding-lr {{currentIndex == 1?'bg-blue':'bg-gray'}} padding-tb-sm radius-10 margin-right" bindtap="change" data-index='1'>小宇</view>
+  <view class="padding-lr {{currentIndex == 0?'bg-blue':'bg-gray'}} padding-tb-sm radius-10 margin-right" bindtap="change" data-index='0'>小美</view>
+  <view class="padding-lr {{currentIndex == 3?'bg-blue':'bg-gray'}} padding-tb-sm radius-10 margin-right" bindtap="change" data-index='3'>逍遥</view>
+  <view class="padding-lr {{currentIndex == 4?'bg-blue':'bg-gray'}} padding-tb-sm radius-10 margin-right" bindtap="change" data-index='4'>丫丫</view>
+</view>
+<view class="flex align-center justify-center margin-top ">
+  <tui-tag type='green' bindtap='play'>合成</tui-tag>
+</view>

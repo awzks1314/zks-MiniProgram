@@ -1,0 +1,102 @@
+<view class="tophead padding">
+  <view class="flex align-center justify-between ">
+    <picker bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}" range-key="name" class="picker">
+      <view class="height80 bg-gray  padding-lr round flex align-center justify-around" >
+        <text>{{index1?array1[index1].name:'所在省份'}}</text>
+        <tui-icon name='arrowdown' size="17" color="#000"></tui-icon>
+      </view>
+    </picker>
+    <view class="broder round height80 flex align-center justify-center">
+      <input class="input  padding-lr" placeholder="输入大学名字或者关键词" bindconfirm="search" bindinput="getValue" value="{{keyword}}"></input>
+      <view class="padding-lr flex align-center justify-center height80" bindtap="search">
+        <tui-icon name='search' size='20'></tui-icon>
+      </view>
+    </view>
+  </view>
+  <view class="padding-top flex align-center justify-between" style="width:100%;">
+    <picker bindchange="bindPickerChange" value="{{typeIndex}}" range="{{typeList}}" range-key="name" class="picker">
+      <view class="height80 bg-gray  padding-lr round flex align-center justify-around">
+        <text class="text-cut">{{typeIndex?typeList[typeIndex].name:'院校类型'}}</text>
+        <tui-icon name='arrowdown' size="17" color="#000"></tui-icon>
+      </view>
+    </picker>
+    <picker bindchange="bindPickerChange2" value="{{schoolTypeIndex}}" range="{{schoolTypeList}}" range-key="name" class="picker">
+      <view class="height80 bg-gray  padding-lr round flex align-center justify-around ">
+        <view class="text-cut">{{schoolTypeIndex?schoolTypeList[schoolTypeIndex].name:'办学类型'}}</view>
+        <tui-icon name='arrowdown' size="17" color="#000"></tui-icon>
+      </view>
+    </picker>
+    <picker bindchange="bindPickerChange3" value="{{levelListIndex}}" range="{{levelList}}" range-key="name" class="picker">
+      <view class="height80 bg-gray  padding-lr round flex align-center justify-around">
+        <text class="text-cut">{{levelListIndex?levelList[levelListIndex].name:'高校层次'}}</text>
+        <tui-icon name='arrowdown' size="17" color="#000"></tui-icon>
+      </view>
+    </picker>
+  </view>
+  <view class="flex align-center justify-between padding-top">
+    <tui-tag bindtap='previousPage'>上一页</tui-tag>
+    <tui-tag bindtap='nextPage'>下一页</tui-tag>
+    <tui-tag bindtap='reset'>重置搜索</tui-tag>
+    <tui-tag bindtap='search'>查询结果</tui-tag>
+  </view>
+</view>
+<view style="height:310rpx;"></view>
+<view class="padding text-center" wx:if='{{list.length==0}}'>
+  <text class="margin-tb-lg text-red">没有更多了，请重新查询</text>
+</view>
+<view class="padding" wx:else>
+  <view class="libox radius-10 margin-bottom" wx:for='{{list}}' wx:key='index'>
+    <view class="lii text-white padding flex  justify-between">
+      <view class="text-lg text-bold text-cut">{{item.name}}</view>
+      <view class="flex align-center justify-center bg-white radius-30 padding-lr padding-tb-sm text-center" style="width:280rpx;">
+        <text>人气指数</text>
+        <text class="text-red">{{item.view_total_number}}</text>
+      </view>
+    </view>
+    <view class="bg-white padding flex flex-wrap">
+      <view class="ullii">
+        <text>办学性质:<text class="text-blue">{{item.nature_name}}</text></text>
+      </view>
+      <view class="ullii">
+        <text>学历层次:<text class="text-blue">{{item.level_name}}</text></text>
+      </view>
+      <view class="ullii">
+        <text>院校类型:<text class="text-blue">{{item.type_name}}</text></text>
+      </view>      
+      <view class="ullii">
+        <text>211工程大学:<text class="text-blue">{{item.f211==1?'是':'否'}}</text></text>
+      </view>
+      <view class="ullii">
+        <text>985工程大学:<text class="text-blue">{{item.f985==1?'是':'否'}}</text></text>
+      </view>
+      <view class="ullii">
+        <text>双一流院校:<text class="text-blue">{{item.dual_class_name?'是':'否'}}</text></text>
+      </view>
+      <view class="ullii">
+        <text>教育部直属院校:<text class="text-blue">{{item.department==1?'是':'否'}}</text></text>
+      </view>
+      <view class="ullii">
+        <text>中央部委院校:<text class="text-blue">{{item.central==1?'是':'否 '}}</text></text>
+      </view>
+      <view class="width100 text-cut-2 padding-tb-sm flex align-center">
+        <view>所在地址：</view> 
+        <view class="flex-sub  flex flex-direction" style="width:60%;">
+          <view wx:for='{{item.addressList}}' bindtap="gotomap" data-info="{{items}}" wx:for-item = 'items' wx:key='index' class="text-cut  text-blue ">{{items}}</view>
+        </view>
+        <!-- <text>所在地址:<text class="text-blue text-underline">{{item.address}}</text></text> -->
+      </view>
+      <view class="width100 text-cut-2 padding-top-sm flex align-center" wx:if='{{item.answerurl}}' bindtap='copy' data-info='{{item.answerurl}}'>
+        <text class="">招生办官网:</text>
+        <view class="text-blue text-cut padding-lr-sm" style="width:60%;">{{item.answerurl}}</view>
+        <tui-tag size='small' >复制</tui-tag>
+      </view>
+        <!-- 加入对比 -->
+        <view class="padding-top flex align-center justify-around width100" >
+          <tui-tag  bindtap='detail' data-id='{{item.school_id}}'>查看详情</tui-tag>
+          <tui-tag  type='gray' bindtap='addComparison' data-id='{{item.school_id}}'>加入对比</tui-tag>
+        </view>
+    </view>
+  </view>
+</view>
+
+<tui-fab left="{{left}}" wx:if='{{comparsion.length>0 && list.length>0}}' right="{{right}}" bottom="{{bottom}}" bgColor="{{bgColor}}" btnList="{{lists}}" bind:click="onClick"></tui-fab>

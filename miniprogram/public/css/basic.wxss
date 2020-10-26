@@ -1,0 +1,693 @@
+/* 公共样式 */
+page {
+	font-size: 28rpx;
+	color: #333333;
+	font-family: Helvetica Neue, Helvetica, sans-serif;
+}
+view,
+scroll-view,
+swiper,
+button,
+input,
+textarea,
+label,
+navigator,
+image {
+	box-sizing: border-box;
+}
+textarea{
+-webkit-user-select:auto; /*webkit浏览器*/  
+user-select:auto;
+-o-user-select:auto;
+-ms-user-select:auto;
+}
+.fixed{
+  position: fixed;
+}
+/* 圆角和圆形 */
+.round{
+  border-radius: 50000rpx;
+}
+.radius-10{
+  border-radius: 10rpx;
+}
+.radius-20{
+  border-radius: 20rpx;
+}
+.radius-30{
+  border-radius: 30rpx;
+}
+.text-indent{
+  text-indent: 56rpx;
+}
+/* ==================
+          图片
+ ==================== */
+ .image-sm{
+	 width: 100rpx;
+	 height: 100rpx;
+ }
+ .img400{width: 400rpx;height: 400rpx;}
+ .img-size-30{width: 30rpx;height: 30rpx;}
+  .img-size-60{width: 60rpx;height: 60rpx;}
+  .img-size-40{width: 40rpx;height: 40rpx;}
+ .img-size-81{width: 80rpx;height: 80rpx;}
+ .img-size-120{width: 120rpx;height: 120rpx;}
+ .img-size-160{width: 160rpx;height: 160rpx;}
+ .image{
+	width: 200rpx;
+	height: 200rpx;
+}
+.image-lg{
+	width: 300rpx;
+	height: 300rpx;
+}
+.height100{
+  height: 100rpx;
+}
+.height80{
+  height: 80rpx;
+}
+.tui-divider-img{
+  width: 32rpx;
+  height: 32rpx;
+  vertical-align: middle;
+}
+/* 边框 */
+.broder{
+  border:2rpx solid rgba(0,0,0,.1);
+}
+.broder-top{
+  border-top:2rpx solid rgba(0,0,0,.1);
+}
+.broder-bottom{
+  border-bottom:2rpx solid rgba(0,0,0,.1);
+}
+.broder-right{
+  border-right:2rpx solid rgba(0,0,0,.1);
+}
+.broder-left{
+  border-left:2rpx solid rgba(0,0,0,.1);
+}
+/* ==================
+          文本
+ ==================== */
+ .text-decoration{
+  text-decoration:line-through;
+ }
+ .text-underline{
+  text-decoration: underline;
+ }
+ .tui-text{
+  padding-left: 10rpx;
+  vertical-align: middle;
+  font-size: 28rpx
+}
+ .text-xs {
+	font-size: 20rpx;
+}
+
+.text-sm {
+	font-size: 24rpx;
+}
+
+.text-df {
+	font-size: 28rpx;
+}
+
+.text-lg {
+	font-size: 32rpx;
+}
+
+.text-xl {
+	font-size: 36rpx;
+}
+
+.text-xxl {
+	font-size: 44rpx;
+}
+.text-xxxl {
+	font-size: 60rpx;
+}
+.text-sl {
+	font-size: 80rpx;
+}
+
+.text-xsl {
+	font-size: 120rpx;
+}
+
+.text-Abc {
+	text-transform: Capitalize;
+}
+
+.text-ABC {
+	text-transform: Uppercase;
+}
+
+.text-abc {
+	text-transform: Lowercase;
+}
+
+.text-price::before {
+	content: "¥";
+	font-size: 80%;
+	margin-right: 4rpx;
+} 
+
+.text-cut {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.text-cut-2 {
+	text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.text-bold {
+	font-weight: bold;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-content {
+	line-height: 1.6;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+.text-red,
+.line-red,
+.lines-red {
+	color: red!important;
+}
+.text-qianBlue,
+.line-qianBlue,
+.lines-qianBlue {
+	color: rgb(102, 158, 241)!important;
+}
+
+.text-orange,
+.line-orange,
+.lines-orange {
+	color: #f37b1d;
+}
+
+.text-yellow,
+.line-yellow,
+.lines-yellow {
+	color: #fbbd08;
+}
+
+.text-green,
+.line-green,
+.lines-green {
+	color: #39b54a;
+}
+.text-blue,
+.line-blue,
+.lines-blue {
+	color: #0081ff;
+}
+.text-foot,
+.line-foot,
+.lines-foot {
+	color: #056061;
+}
+.text-grey,
+.line-grey,
+.lines-grey {
+	color: #8799a3;
+}
+
+.text-gray,
+.line-gray,
+.lines-gray {
+	color: #aaaaaa;
+}
+
+.text-black,
+.line-black,
+.lines-black {
+	color: #333333;
+}
+
+.text-white,
+.line-white,
+.lines-white {
+	color: #ffffff;
+}
+/* 内外边距 */
+/* padding */
+.padding{
+  padding: 20rpx;
+}
+.padding-sm{
+  padding: 10rpx;
+}
+.padding-lg{
+  padding: 30rpx;
+}
+.padding-top-sm{
+  padding-top: 10rpx;
+}
+.padding-top{
+  padding-top: 20rpx;
+}
+.padding-top-lg{
+  padding-top: 30rpx;
+}
+.padding-right-sm{
+  padding-right: 10rpx;
+}
+.padding-right{
+  padding-right: 20rpx;
+}
+.padding-right-lg{
+  padding-right: 30rpx;
+}
+.padding-left-sm{
+  padding-left: 10rpx;
+}
+.padding-left{
+  padding-left: 20rpx;
+}
+.padding-left-lg{
+  padding-left: 30rpx;
+}
+.padding-bottom-sm{
+  padding-bottom: 10rpx;
+}
+.padding-bottom{
+  padding-bottom: 20rpx;
+}
+.padding-bottom-lg{
+  padding-bottom: 30rpx;
+}
+/* margin */
+.margin{
+  margin: 20rpx;
+}
+.margin-sm{
+  margin: 20rpx;
+}
+.margin-lg{
+  margin: 30rpx;
+}
+.margin-top-sm{
+  margin-top: 10rpx;
+}
+.margin-top{
+  margin-top: 20rpx;
+}
+.margin-top-lg{
+  margin-top: 30rpx;
+}
+.margin-right-sm{
+  margin-right: 10rpx;
+}
+.margin-right{
+  margin-right: 20rpx;
+}
+.margin-right-lg{
+  margin-right: 30rpx;
+}
+.margin-left-sm{
+  margin-left: 10rpx;
+}
+.margin-left{
+  margin-left: 20rpx;
+}
+.margin-left-lg{
+  margin-left: 30rpx;
+}
+.margin-bottom-sm{
+  margin-bottom: 10rpx;
+}
+.margin-bottom{
+  margin-bottom: 20rpx;
+}
+.margin-bottom-lg{
+  margin-bottom: 30rpx;
+}
+/* 左右边距 */
+.margin-lr-sm{
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+.margin-lr{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.margin-lr-lg{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.margin-tb-sm{
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+.margin-tb{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.margin-tb-lg{
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+.padding-tb-sm{
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}
+.padding-tb{
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.padding-tb-lg{
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}
+.padding-lr-sm{
+  padding-right: 10rpx;
+  padding-left: 20rpx;
+}
+.padding-lr{
+  padding-right: 20rpx;
+  padding-left: 20rpx;
+}
+.padding-lr-40{
+  padding-right: 40rpx;
+  padding-left: 40rpx;
+}
+.padding-lr-lg{
+  padding-right: 30rpx;
+  padding-left: 30rpx;
+}
+/* 背景 */
+
+.bg-red {
+	background-color: red;
+	color: #ffffff;
+}
+.bg-redpink {
+	background-color: #e54d42;
+	color: #ffffff;
+}
+.bg-orange {
+	background-color: #f37b1d;
+	color: #ffffff;
+}
+
+.bg-purple {
+	background-color: #6739b6;
+	color: #fff;
+}
+
+.bg-mauve {
+	background-color: #9c26b0;
+	color: #fff;
+}
+.bg-yellow {
+	background-color: #fbbd08;
+	color: #fff;
+}
+
+.bg-olive {
+	background-color: #8dc63f;
+	color: #ffffff;
+}
+.bg-green {
+	background-color: #39b54a;
+	color: #ffffff;
+}
+.bg-pink {
+	background-color: #e03997;
+	color: #ffffff;
+}
+.bg-brown {
+	background-color: #a5673f;
+	color: #ffffff;
+}
+.bg-blue {
+	background-color: #0081ff;
+	color: #ffffff;
+}
+.bg-foot{
+  background-color: #056061;
+	color: #ffffff;
+}
+.bg-grey {
+	background-color: #8799a3;
+	color: #ffffff;
+}
+
+.bg-gray {
+	background-color: #f0f0f0;
+	color: #333333;
+}
+
+.bg-black {
+	background-color: #333333;
+	color: #ffffff;
+}
+
+.bg-white {
+	background-color: #ffffff;
+	color: #666666;
+}
+
+/* flex布局 */
+.flex-sub {
+	flex: 1;
+}
+
+.flex-twice {
+	flex: 2;
+}
+
+.flex-treble {
+	flex: 3;
+}
+.flex {
+	display: flex;
+}
+
+.flex-direction {
+	flex-direction: column;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.align-start {
+	align-items: flex-start;
+}
+
+.align-end {
+	align-items: flex-end;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.justify-start {
+	justify-content: flex-start;
+}
+
+.justify-end {
+	justify-content: flex-end;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.justify-between {
+	justify-content: space-between;
+}
+
+.justify-around {
+	justify-content: space-around;
+}
+.width100{
+  width: 100%;
+}
+/* 盒子阴影 */
+.shadow2{box-shadow: 0 3px 10px rgba(0,0,0,.1);}
+.shadow{box-shadow: 0 3rpx 20rpx rgba(183, 183, 183, 0.1);}
+.shadow3{box-shadow: 0 10rpx 50rpx 0 rgba(0,42,110,0.15); }
+.shadow1{box-shadow:0 2px 2px rgba(10,16,20,.24),0 0 2px rgba(10,16,20,.12);}
+/*
+* tag
+*/
+.tui-tag {
+  padding: 16rpx 26rpx;
+  font-size: 28rpx;
+  border-radius: 6rpx;
+  display: inline-block;
+  line-height: 28rpx;
+}
+
+.tui-danger {
+  background: #ed3f14 !important;
+  color: #fff;
+}
+
+.tui-warning {
+  background: #ff7900 !important;
+  color: #fff;
+}
+
+.tui-green {
+  background: #19be6b !important;
+  color: #fff;
+}
+
+.tui-black {
+  background: #000 !important;
+  color: #fff;
+}
+
+.tui-white {
+  background: #fff !important;
+  color: #333 !important;
+}
+.tui-primary {
+  background: #5677fc !important;
+  color: #fff;
+}
+
+/* listcell */
+.tui-cell-name {
+  padding-left: 20rpx;
+  vertical-align: middle;
+  line-height: 30rpx;
+}
+.tui-list::after{
+  left: 94rpx !important
+}
+.tui-right {
+  margin-left: auto;
+  margin-right: 34rpx;
+  font-size: 26rpx;
+  line-height: 1;
+  color: #999;
+}
+.border{
+  border-bottom: 1rpx solid #aaaa;
+}
+.border:nth-last-child(1){
+  border-bottom: none;
+}
+.borderT{
+  border-top: 1rpx solid #aaaa;
+}
+/*
+* 输入框
+*/
+.tui-cells {
+  /* border: 1rpx solid #e6e6e6; */
+  border-radius: 4rpx;
+  height: 250rpx;
+  box-sizing: border-box;
+  padding: 20rpx 20rpx 0 20rpx;
+  position: relative;
+}
+
+.tui-cells::after {
+  content: '';
+  position: absolute;
+  height: 200%;
+  width: 200%;
+  border: 1px solid #e6e6e6;
+  transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  left: 0;
+  top: 0;
+  border-radius: 8rpx;
+}
+
+.tui-textarea {
+  height: 191rpx;
+  width: 100%;
+  color: #666;
+  font-size: 28rpx;
+}
+
+.tui-phcolor-color {
+  color: #ccc !important;
+}
+.tui-textarea-counter {
+  font-size: 24rpx;
+  color: #999;
+  text-align: right;
+  height: 40rpx;
+  line-height: 40rpx;
+  padding-top: 4;
+}
+.tui-line-cell {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  /* align-items: center; */
+}
+
+.tui-title {
+  line-height: 32rpx;
+  flex-shrink: 0;  
+}
+.tui-input {
+  font-size: 28rpx;
+  color: #333;
+  flex: 1;
+}
+.tui-input-bottom {
+  font-size: 28rpx;
+  color: #333;
+  flex: 1;
+  height:60rpx;
+  padding-right:30rpx;
+}
+.tui-order-title {
+  position: relative;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  padding-left: 12rpx;
+  box-sizing: border-box;
+}
+
+.tui-order-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-left: 6rpx solid #056061;
+  height: 40rpx;
+}
+.height70{
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.height60{
+  height: 60rpx;
+  line-height: 60rpx;
+}
+/* 按钮 */

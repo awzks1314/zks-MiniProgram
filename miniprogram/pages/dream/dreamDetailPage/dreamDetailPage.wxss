@@ -1,0 +1,9 @@
+
+.libox{
+  width: 30%;
+  height: 80rpx;
+  margin-right: 5%;
+}
+.libox:nth-child(3n){
+  margin-right: 0;
+}

@@ -1,0 +1,7 @@
+<view class="li padding-lg radius-30 shadow2 text-lg">
+  <rich-text nodes='{{result}}' ></rich-text>
+</view>
+<view class="padding margin-top-lg flex align-center justify-around fixed" style="width:100%;bottom:200rpx;">
+  <tui-tag type='light-blue' bindtap='getDeatil'>换一个</tui-tag>
+  <tui-tag bindtap='copy'>复制</tui-tag>
+</view>

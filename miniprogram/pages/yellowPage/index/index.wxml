@@ -1,0 +1,18 @@
+<view class="padding-lg">
+  <view class="text-xxl text-bold padding-lr-lg">电话本</view>
+  <view class="padding-lr-lg text-gray">不要慌，点击立刻拨打</view>
+</view>
+<view class="padding-lr-lg">
+  <view wx:for='{{mobileList}}' wx:key='index' class="radius-10 bg-white padding-lr-lg padding-top margin-bottom">
+    <view class="flex align-center justify-between padding-bottom" bindtap="changeType" data-index="{{index}}">
+      <text class="text-bold text-lg">{{item.title}}</text>
+      <tui-icon name='arrowdown' size='22'></tui-icon>
+    </view>
+    <view wx:if='{{item.isShow}}'>
+      <view wx:for='{{item.list}}' wx:for-item='mobile' wx:key='index' class="padding-tb border flex align-center justify-between" bindtap="callMobile" data-mobile="{{mobile.mobile}}">
+        <text>{{mobile.title}}</text>
+        <text>{{mobile.mobile}}</text>
+      </view>
+    </view>
+  </view>
+</view>

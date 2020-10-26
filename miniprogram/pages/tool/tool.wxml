@@ -1,0 +1,23 @@
+<view   class="tui-slide-image">
+  <image wx:for="{{imgUrls}}" wx:key="index" src="{{item}}" class="tui-slide-image" bindtap='bindImageTap'  lazy-load="true"/>
+</view>
+<scroll-view class="mainBox bg-white radius-10 shadow3 padding" scroll-y>
+  <view wx:for='{{list}}' wx:key='id'>
+    <text class="text-bold text-lg">{{item.title}}</text>
+    <view  class="flex padding-tb flex-wrap">
+      <view hover-class='none' class="libox  margin-bottom flex align-center flex-direction" data-url="{{items.link}}" wx:for="{{item.cont}}" wx:key='key' wx:for-item = 'items' bindtap="gotoUrl" >
+        <view class="padding-sm bg-gray round img-sm flex align-center justify-center">
+          <!-- <image src="/images/tool/{{items.key}}.png" class="img-size-81"></image> -->
+          <image src="https://7765-weixindemo-pw3dn-1300152060.tcb.qcloud.la/tool/{{items.key}}.png?sign=63af6a60b2b9a0d8057a47e4f32a6928&t=1602384095" class="img-size-81"></image>
+        </view>
+        <text>{{items.name}}</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<tui-modal show="{{showModel}}" bind:cancel="hide8" custom="{{true}}" padding="{{0}}" width="400rpx" height='300rpx'>
+  <view class="tui-modal-custom bg-white radius-20 padding flex flex-direction justify-around">
+      <view class="text-center">授权获取【头像昵称】</view>
+      <button class="text-sm text-center radius-10 padding-tb-sm padding-lr bg-blue" open-type="getUserInfo" bindgetuserinfo="getUserInfo">立即授权</button>
+  </view>
+</tui-modal>   

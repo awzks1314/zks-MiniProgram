@@ -1,0 +1,9 @@
+
+.systeminfo {
+  padding: 0 30rpx 0 30rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.item{
+  height:90rpx;
+}

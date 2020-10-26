@@ -1,0 +1,15 @@
+<view class="flex align-center justify-center broder round height80 ">
+	<input class="input flex-sub padding-lr" placeholder="输入作诗做题(5字以内)" bindconfirm="search" bindinput="getValue" value="{{value}}"></input>
+	<view class="padding-lr flex align-center justify-center height80 " bindtap="search">
+		<tui-icon name='search' size='20'></tui-icon>
+	</view>
+</view>
+<view class="padding-lg margin-top-lg" wx:if='{{poem}}'>
+  <view class="margin-top-lg flex align-center justify-center text-xl flex-direction" wx:for='{{poem}}' wx:key='index'>
+			<view class="text-bold">{{item.title}}</view>
+			<text class="margin-top-lg li" >{{item.content}}</text>
+	</view>
+	<view class="flex align-center justify-center" style="margin-top:200rpx;">
+	<view class="padding bg-gray" bindtap="search">换一个</view>
+</view>
+</view>

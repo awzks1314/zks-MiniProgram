@@ -1,0 +1,15 @@
+
+<view class="bg-white radius-10 padding-tb-lg  flex flex-direction justify-center align-center">
+  <view class="text-center text-lg text-blue padding-bottom-lg">人生只有<text class="text-xxl text-bold">900</text>个月</view>
+  <view class=" flex flex-wrap padding-bottom-lg" style="width:{{boxWidth}};">
+    <view class="monthList" wx:for="{{list}}"  wx:key="index" style="background-color:{{item.color}}" data-index="{{index}}" ></view>
+  </view>
+</view>
+<view class=" text-center text-white">
+  <text class="info-text">
+    {{text}} 
+  </text>
+</view>
+<view class="text-center text-orange " >
+  <text bindtap="reset">重选</text>
+</view>

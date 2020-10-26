@@ -1,0 +1,44 @@
+<view class='content'>
+  <image class="top-bg" src="{{topBgUrl}}" mode="cover" ></image>
+  <view class="card-container">
+    <text class="card-title1">{{year}}年{{month}}月</text>
+    <text class="card-title2">{{todayData.nongli}}</text>
+    <text class="card-title3">{{day}}</text>
+    <text class="card-title4">{{todayData.week}}</text>
+    <view class="card-title5-container">
+      <text class="text-xxxl text-gray">“</text>
+      <view class="text-lg text-bold text-center">{{wordInfo.note}}</view>
+      <text class="text-xxxl text-gray">”</text>
+    </view>
+    <view class='card-line1'></view>
+    <view class='card-line2'></view>
+     <view class='card-bottom-container'>
+      <view class='card-bottom-item padding-tb'>
+        <view class="img-size-60 round bg-red flex align-center justify-center text-bold text-lg">宜</view>
+        <view class='card-dot'></view>
+        <text class='card-bottom-title'>{{todayData.do}}</text>
+      </view>
+      <view class='card-bottom-item'>
+        <view class="img-size-60 round bg-red flex align-center justify-center text-bold text-lg">忌</view>
+        <view class='card-dot'></view>
+        <text class='card-bottom-title'>{{todayData.nodo}}</text>
+      </view>
+    </view> 
+  </view>
+  <view class='share-title-container'>
+    <view class='share-line'></view>
+    <text class='share-title'>每日幸运签 分享给好友</text>
+    <view class='share-line'></view>
+  </view>
+  <view class='share-icon-container'>
+    <button open-type='share' plain="true" class='share-bt'>
+      <tui-icon name='wechat'></tui-icon>
+    </button>
+     <!-- <button plain="true" class='share-bt' bindtap='bindShareTap'>
+      <tui-icon name='download'></tui-icon>
+    </button>  -->
+  </view>
+</view>
+
+<!--  -->
+<!-- <share-box isCanDraw="{{maskHidden}}" playData='{{playData}}' isContinue='{{true}}' bind:initData="createShareImage" /> -->

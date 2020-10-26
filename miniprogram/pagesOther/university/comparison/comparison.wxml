@@ -1,0 +1,52 @@
+<view class="width100 flex">
+  <view class="lii">
+    <view class="topLi heig bottomRight">学校名称</view>
+    <!-- <view class="heig bottomRight">人气指数</view> -->
+    <view class="heig bottomRight">占地面积</view>
+    <view class="heig bottomRight">所属地区</view>
+    <view class="heig bottomRight">办学性质</view>
+    <view class="heig bottomRight">学历层次</view>
+    <view class="heig bottomRight">院校类型</view>
+    <view class="heig bottomRight">办学类型</view>
+    <view class="heig bottomRight">211工程大学</view>
+    <view class="heig bottomRight">985工程大学</view>
+    <view class="heig bottomRight">教育部直属院校</view>
+    <view class="heig bottomRight">中央部委院校</view>
+    <view class="heig bottomRight">硕士点数量</view>
+    <view class="heig bottomRight">博士点数量</view>
+    <view class="heig bottomRight">院士数量</view>
+    <view class="heig bottomRight">重点学科数量</view>
+    <view class="heig bottomRight">藏书数量(万)</view>
+    <!-- <view class="heig bottomRight">双一流数量</view>
+    <view class="heig bottomRight">自主招生试点</view> -->
+    <view class="heig bottomRight">重点实验室数量</view>
+    <view class="heig bottomRight">就业率</view>
+    <view class="heig bottomRight">操作</view>
+  </view>
+  <view class="li" wx:for='{{listInfo}}' wx:key='index'>
+    <view class="topLi heig text-cut bottomRight">{{item.name}}</view>
+    <!-- <view class="heig bottomRight">{{item.name}}</view> -->
+    <view class="heig bottomRight">{{item.area}}</view>
+    <view class="heig bottomRight">{{item.province_name}}</view>
+    <view class="heig bottomRight">{{item.school_nature_name}}</view>
+    <view class="heig bottomRight">{{item.school_type_name}}</view>
+    <view class="heig bottomRight">{{item.type_name}}</view>
+    <view class="heig bottomRight">{{item.school_type_name}}</view>
+    <view class="heig bottomRight">{{item.f211==1?'是':'否'}}</view>
+    <view class="heig bottomRight">{{item.f985==1?'是':'否'}}</view>
+    <view class="heig bottomRight">{{item.department==1?'是':'否'}}</view>
+    <view class="heig bottomRight">{{item.central==1?'是':'否'}}</view> 
+    <view class="heig bottomRight">{{item.num_master}}</view>
+    <view class="heig bottomRight">{{item.num_doctor}}</view>
+    <view class="heig bottomRight">{{item.num_academician}}</view>
+    <view class="heig bottomRight">{{item.num_subject}}</view>
+    <view class="heig bottomRight">{{item.num_library}}</view>
+    <!-- <view class="heig bottomRight">{{item.name}}</view>
+    <view class="heig bottomRight">{{item.name}}</view> -->
+    <view class="heig bottomRight">{{item.num_lab}}</view>
+    <view class="heig bottomRight">{{item.job}}</view>
+    <view class="heig bottomRight flex align-center" bindtap="dele" data-index="{{index}}">
+      <tui-tag>删除</tui-tag>
+    </view>
+  </view>
+</view>

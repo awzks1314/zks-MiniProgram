@@ -1,0 +1,14 @@
+<swiper class="swiperSty" scroll-x current='{{current}}' circular="true" bindchange='changeCurrent'>
+  <swiper-item class='itemWidth' wx:for='{{list}}' wx:key='index'>
+    <view class="swiper-item   flex flex-direction ">
+      <view class="">{{item.quest}}</view>
+      <view class=" margin-top text-blue" wx:if='{{isShow}}'>{{item.result}}</view>
+      <view class=" margin-top text-blue bg-black" style="width:300rpx;height:28rpx;" wx:else></view>
+    </view>
+  </swiper-item>
+</swiper>
+<view class="boom padding-lg flex align-center justify-between">
+  <view class="bg-blue padding-lr padding-tb-lg radius-30" bindtap="reduce">上一个</view>
+  <view class="bg-blue padding-lr padding-tb-lg radius-30" bindtap="changeShow">查看答案</view>
+  <view class="bg-blue padding-lr padding-tb-lg radius-30"  bindtap="add">下一个</view>
+</view>

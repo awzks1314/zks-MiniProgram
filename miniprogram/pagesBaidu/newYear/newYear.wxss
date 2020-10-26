@@ -1,0 +1,9 @@
+page{
+  padding:20rpx;
+}
+.lis{
+  min-width: 400rpx;
+}
+.li{
+  width: 100rpx;
+}

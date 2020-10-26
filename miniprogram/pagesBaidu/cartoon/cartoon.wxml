@@ -1,0 +1,11 @@
+<view class="padding flex  align-center  justify-around flex-direction">
+  <image wx:if='{{img}}' src="{{img}}"   mode="aspectFit"   class="shadow bg-gray" show-menu-by-longpress bindtap="chooseimgTap"></image>
+  <image wx:elif='{{imgs}}' src="data:image/png;base64,{{imgs}}"   mode="aspectFit"  class="shadow bg-gray" show-menu-by-longpress></image>
+  <view wx:else style="width:320px;height:240px;"  class="shadow bg-gray flex align-center justify-center text-xxl text-bold" bindtap="chooseimgTap">选择图片</view>
+
+  <text class="text-gray text-center padding-tb-sm" wx:if='{{imgs}}'>长按保存图片</text>
+  <view class="flex margin-top  justify-around">
+    <tui-tag class='margin-right' bindtap='chooseimgTap' wx:if='{{imgs}}'>选择图片</tui-tag>
+    <tui-tag class='' bindtap='changeCartoon'>开始表演</tui-tag>
+  </view>
+</view>

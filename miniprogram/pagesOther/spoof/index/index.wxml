@@ -1,0 +1,23 @@
+<view class="padding bg-white radius-10">
+  <view class="inputValue">
+    <text>呼入名称:</text>
+    <input bindinput="inputValue" data-type="name" value="{{ randomName }}" />
+  </view>
+  <view class="inputValue">
+    <text>备注显示:</text>
+    <input bindinput="inputValue" data-type="remark" value="{{ randomRemark }}" />
+  </view>
+  <!-- <view class="inputValue">
+    <text>电话语音:</text>
+    <picker bindchange="bindPickerChange" value="{{ audioIndex }}" range="{{ audioArr }}" range-key="title">
+      <view class="picker">
+        {{ audioArr[audioIndex].title || '暂无语音提供'}}
+      </view>
+    </picker>
+  </view> -->
+  <view class="flex align-center justify-between margin-top">
+    <tui-tag class='flex-sub margin-right text-center' catchtap="jumpCall">预览效果</tui-tag>
+    <button hover-class="none" open-type="share" class="flex-sub bg-blue bu">恶搞好友
+    </button>
+  </view>
+</view>

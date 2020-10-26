@@ -1,0 +1,13 @@
+<view class=''>
+    <navBar title='{{title}}' background='{{background}}' backgroundColorTop='rgba(255,255,255,0)'  back="{{true}}" home="{{true}}"  bindback="handlerGobackClick" bindhome="handlerGohomeClick"></navBar>
+</view>
+
+<view class="box">
+  <view class="padding flex flex-wrap ">
+    <block wx:for='{{titleData[index]}}' wx:key='index'>
+      <navigator url="../detail/detail?key={{item}}&fromTitleList=true"  open-type="redirectTo" class="libox radius-10 margin-bottom-sm flex align-center justify-center padding text-cut-2 bg-blue">
+        <text class="text-white">{{item}}</text>
+      </navigator>
+    </block>
+  </view>
+</view>

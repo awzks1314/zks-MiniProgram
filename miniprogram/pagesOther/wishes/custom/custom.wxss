@@ -1,0 +1,22 @@
+
+.tui-title {
+  width: 120rpx;
+  line-height: 32rpx;
+  flex-shrink: 0;
+}
+
+.tui-input {
+  color: #333;
+}
+.boxx{
+  position: relative;
+}
+.textarea{
+  width: 500rpx!important;
+  height: 200rpx!important;  
+}
+.word{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

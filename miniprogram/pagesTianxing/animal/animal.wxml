@@ -1,0 +1,71 @@
+<view class="flex align-center justify-center broder round height80">
+	<input class="input  padding-lr" placeholder="搜索你想要了解的宠物名字" bindconfirm="search" bindinput="getValue" value="{{value}}"></input>
+	<view class="padding-lr flex align-center justify-center height80" bindtap="search">
+		<tui-icon name='search' size='20'></tui-icon>
+	</view>
+</view>
+<view class="padding-tb padding-lr-sm shadow2 margin-top-lg" wx:if='{{newlist}}'>
+	<view class=" flex align-center justify-between">
+    <view class="">
+      <view class="padding-tb-sm">
+        <text class="text-gray">宠物名称:</text>
+        <text>{{newlist.name}}</text>
+      </view>
+      <view class="padding-tb-sm">
+        <text class="text-gray">宠物类型:</text>
+        <text wx:if="{{newlist.pettype == 0}}">猫科</text>
+        <text wx:elif="{{newlist.pettype == 1}}">犬科</text>
+        <text wx:elif="{{newlist.pettype == 2}}">爬行类</text>
+        <text wx:elif="{{newlist.pettype == 3}}">小宠物类型</text>
+        <text wx:elif="{{newlist.pettype == 4}}">水族类</text>
+      </view>
+      <view class="padding-tb-sm">
+        <text class="text-gray">英文名:</text>
+        <text>{{newlist.engName}}</text>
+      </view>
+    </view>
+    <image src="{{newlist.coverURL}}" class="img-size-160 radius-10"></image>
+  </view>
+	
+	<view class="padding-tb-sm">
+		<text class="text-gray">性格:</text>
+		<text>{{newlist.characters}}</text>
+	</view>
+	<view class="padding-tb-sm">
+		<text class="text-gray">祖籍:</text>
+		<text>{{newlist.nation}}</text>
+	</view>
+	<view class="padding-tb-sm">
+		<text class="text-gray">易患:</text>
+		<text>{{newlist.easyOfDisease}}</text>
+	</view>
+	<view class="padding-tb-sm">
+		<text class="text-gray">寿命:</text>
+		<text>{{newlist.life}}</text>
+	</view>
+	<view class="padding-tb-sm">
+		<text class="text-gray">价格:</text>
+		<text>{{newlist.price}}</text>
+	</view>
+	<view class="padding-tb-sm">
+		<text class="text-gray">描述:</text>
+		<text>{{newlist.desc}}</text>
+	</view>
+	<view class="padding-tb-sm">
+		<text class="text-gray">特点:</text>
+		<text>{{newlist.characterFeature}}</text>
+	</view>
+	<view class="padding-tb-sm">
+		<text class="text-gray">体态特征:</text>
+		<text>{{newlist.feature}}</text>
+	</view>
+	<view class="padding-tb-sm">
+		<text class="text-gray">照顾须知:</text>
+		<text>{{newlist.careKnowledge}}</text>
+	</view>
+	<view class="padding-tb-sm">
+		<text class="text-gray">喂养注意:</text>
+		<text>{{newlist.feedPoints }}</text>
+	</view>
+
+</view>

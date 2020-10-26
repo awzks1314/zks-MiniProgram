@@ -1,0 +1,18 @@
+<view class="padding">
+    <view class=" flex align-center  padding-tb padding-lr-lg border">
+      <view class="tui-title">对方称呼</view>
+      <input placeholder-class="phcolor" class="tui-input text-lg padding-left flex-sub" value="{{toname}}"  placeholder="请输入对方称呼" maxlength="12" type="text" bindinput="getValueto"/> 
+    </view>
+    <view class=" flex align-center padding-tb padding-lr-lg border">
+      <view class="tui-title">祝福落款</view>
+      <input placeholder-class="phcolor" class="tui-input text-lg padding-left flex-sub" value="{{fromname}}"  placeholder="请输入祝福落款" maxlength="12" type="text" bindinput="getValuefrom"/> 
+    </view>
+    <view class=" flex padding-tb padding-lr-lg ">
+      <view class="tui-title">祝 福 语 </view>
+      <view class="boxx">
+        <textarea bindinput="bindChangeText" placeholder="请输入祝福语" class="textarea margin-left" name="best-wishes" value="{{sentence}}" maxlength="50"></textarea>
+        <text class="word text-gray">50字以内</text>
+      </view>
+    </view>
+    <view class="bg-blue padding text-center radius-10" bindtap="gotoUp">保存</view>
+</view>

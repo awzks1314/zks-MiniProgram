@@ -1,0 +1,1 @@
+<view class="tui-icon-class tui-icon tui-icon-{{name}}" style="font-size: {{ size*2 }}rpx; {{ color ? 'color:' + color : '' }};{{bold?'font-weight: bold': ''}}" wx:if="{{visible}}"></view>

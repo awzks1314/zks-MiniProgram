@@ -1,0 +1,20 @@
+<view class="flex align-center justify-center broder round height80 ">
+	<input class="input  padding-lr flex-sub" placeholder="输入春联主题(5字以内)" bindconfirm="search" bindinput="getValue" value="{{value}}"></input>
+	<view class="padding-lr flex align-center justify-center height80" bindtap="search">
+		<tui-icon name='search' size='20'></tui-icon>
+	</view>
+</view>
+<view class="padding-lg margin-top-lg" wx:if='{{couplets}}'>
+  <view class="margin-top-lg">
+			<view class="flex  justify-center">
+				<view class="padding bg-red lis text-center text-xl text-bold">{{couplets.center}}</view>
+			</view>
+			<view class="flex justify-between margin-top-lg padding-lg">
+				<view class="li bg-red padding text-xl text-bold text-center">{{couplets.second}}</view>
+				<view class="li bg-red padding text-xl text-bold text-center">{{couplets.first}}</view>
+			</view>
+	</view>
+	<view class="flex align-center justify-center" style="margin-top:200rpx;">
+	<view class="padding bg-gray" bindtap="search">换一个</view>
+</view>
+</view>

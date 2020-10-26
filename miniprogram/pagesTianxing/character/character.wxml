@@ -1,0 +1,13 @@
+<view class="padding flex align-center justify-center flex-direction">
+  <picker mode="date" value="{{date}}" start="1900-01-01" end="{{today}}" bindchange="bindDateChange">      
+    <view>
+      您的生日：<text class="text-blue">{{bir?bir:'请选择'}}</text> 
+    </view>
+  </picker>  
+  <tui-tag class='margin-top-lg' wx:if='{{bir}}' bindtap='startTest'>测试性格</tui-tag>
+</view>
+<view class="broder-top padding-lg" wx:for='{{infoList}}' wx:key='index'> 
+  <view class="padding-tb-sm text-bold text-lg">{{item.title}}</view>
+  <!-- <view>{{item.content}}</view> -->
+  <rich-text nodes='{{item.content}}' class="text-indent"></rich-text>
+</view>

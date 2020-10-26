@@ -1,0 +1,11 @@
+page{
+  background: #fafafa;
+  font-size: 28rpx;
+}
+.img{
+  height: 700rpx;
+}
+.immg{
+  width:500rpx;
+  height:700rpx;
+}

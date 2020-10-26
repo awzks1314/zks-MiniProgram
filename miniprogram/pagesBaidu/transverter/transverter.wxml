@@ -1,0 +1,27 @@
+<view class="flex  align-center  justify-around flex-direction">
+  <image  src="{{img}}" class="bg-gray radius-10"  mode="aspectFit" bindtap="chooseimgTap"  wx:if='{{img}}' show-menu-by-longpress></image>
+  <view class="flex margin-top-lg  justify-center align-center bg-gray" wx:else style="width:320px;height:240px;" bindtap="chooseimgTap">
+  选择图片
+  </view>
+  <view class="text-center margi-top-sm" wx:if='{{img}}'>
+    <tui-icon name='down' color="rgba(0,0,0,.3)" size="24"></tui-icon>
+  </view>
+  <view class="flex align-center justify-center" wx:if='{{img}}'>
+    <picker mode="selector"  range='{{option}}'  bindchange="changeIndex" range-key="name">      
+      <view>
+        您当前选择的风格是：<text class="text-blue">{{name?name:'请选择'}}</text> 
+      </view>
+    </picker> 
+  </view>
+  <view class="text-center margi-top-sm" wx:if='{{img}}'>
+    <tui-icon name='down' color="rgba(0,0,0,.3)" size="24"></tui-icon>
+  </view>
+  <view class="flex  justify-around" wx:if='{{img}}'>
+    <tui-tag class='' bindtap="changeStyle">转换</tui-tag>
+  </view>
+  <view class="text-center margi-top-sm" wx:if='{{imgs}}'>
+    <tui-icon name='down' color="rgba(0,0,0,.3)" size="24"></tui-icon>
+  </view>
+  <image  src="data:image/png;base64,{{imgs}}"   mode="widthFix" style="width:640rpx;"  wx:if='{{imgs}}' show-menu-by-longpress></image>
+  <text class="text-gray text-center margin-bottom" wx:if="{{imgs}}">长按保存图片</text>
+</view>

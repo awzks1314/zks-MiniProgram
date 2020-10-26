@@ -1,0 +1,59 @@
+<view class="flex  align-center margin-top-lg justify-around flex-direction">
+  <image class=" bg-gray" src="{{img}}" mode="aspectFit" bindtap="chooseimgTap" wx:if='{{img}}'></image>
+  <view wx:else bindtap="chooseimgTap" style="width:320px;height:240px;" class="bg-gray flex align-center justify-center text-xxl text-bold">选择图片</view>
+  <tui-tag bindtap="plantTap" type='green' class='margin-top'>识别图片</tui-tag>
+</view>
+<view class="padding-lg" wx:if='{{list.length>0}}'>
+  <view class="padding-lg  borderT">
+    <text class="text-blue text-bold text-lg">识别结果:</text>
+    <view wx:for='{{list}}' wx:key='index' class="padding-tb flex flex-direction">
+      <text>名  称：<text class="text-blue text-bold">{{item.name}}</text></text>
+      <text>相识度：<text class="text-blue">{{item.pre}}</text> %</text>
+    </view>
+  </view>
+</view>
+<view class="padding-lg" wx:if='{{currencyObject}}'>
+  <view class="padding-lg  borderT">
+    <text class="text-blue text-bold text-lg">识别结果:</text>
+    <view  class="padding-tb flex flex-direction">
+      <text>币种：<text class="text-blue text-bold">{{currencyObject.currencyName}}</text></text>
+      <text>面值：<text class="text-blue">{{currencyObject.currencyDenomination}}</text></text>
+      <text>符号：<text class="text-blue">{{currencyObject.currencyCode}}</text> </text>
+    </view>
+  </view>
+</view>
+<view class="padding-lg" wx:if='{{redwineList}}'>
+  <view class="padding-lg  borderT">
+    <text class="text-blue text-bold text-lg">识别结果:</text>
+    <view  class="padding-tb flex flex-direction">
+      <text wx:if='{{redwineList.wineNameCn}}'>名字：<text class="text-gray text-bold">{{redwineList.wineNameCn}}</text></text>
+      <text>英文名：<text class="text-gray">{{redwineList.wineNameEn}}</text></text>
+      <text>国家：<text class="text-gray">{{redwineList.countryCn}}</text> </text>
+      <text>产区：<text class="text-gray">{{redwineList.regionCn}}</text> </text>
+      <text>酒庄：<text class="text-gray">{{redwineList.wineryCn}}</text> </text>
+      <text>类型：<text class="text-gray">{{redwineList.classifyByColor}}</text> </text>
+      <text>色泽：<text class="text-gray">{{redwineList.color}}</text> </text>
+      <text>品尝温度：<text class="text-gray">{{redwineList.tasteTemperature}}</text> </text>
+      <text>详情描述：<text class="text-gray">{{redwineList.description}}</text> </text>
+    </view>
+  </view>
+</view>
+<view class="padding-lg" wx:if='{{dishList}}'>
+  <view class="padding-lg  borderT">
+    <text class="text-blue text-bold text-lg">识别结果:</text>
+    <view  wx:for='{{dishList}}' wx:key='index' class="padding-tb flex flex-direction">
+      <text>菜名：<text class="text-blue text-bold">{{item.name}}</text></text>
+      <text>卡路里：<text class="text-blue" wx:if='{{item.calorie}}'>{{item.calorie}}卡/100g</text></text>
+      <text>相似率：<text class="text-blue">{{item.pre}}</text> </text>
+    </view>
+  </view>
+</view>
+<view class="padding-lg" wx:if='{{logoList}}'>
+  <view class="padding-lg  borderT">
+    <text class="text-blue text-bold text-lg">识别结果:</text>
+    <view  wx:for='{{logoList}}' wx:key='index' class="padding-tb flex flex-direction">
+      <text>logo名称：<text class="text-blue text-bold">{{item.name}}</text></text>
+      <text>相似率：<text class="text-blue">{{item.pre}}</text> </text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,125 @@
+{
+  "pages": [
+    "pages/tool/tool",
+    "pages/home/home",
+    "pages/calendar/calendar",
+    "pages/dream/index/index",
+    "pages/dream/detail/detail",
+    "pages/dream/groupList/groupList",
+    "pages/dream/dreamDetailPage/dreamDetailPage",
+    "pages/navigation/index/index",
+    "pages/navigation/map/map",
+    "pages/inquire/index/index",
+    "pages/inquire/main/main",
+    "pages/yellowPage/index/index",
+    "pages/constellation/constellation/index",
+    "pages/constellation/detail/index",
+    "pages/life/index/index",
+    "pages/life/detail/index",
+    "pages/weather/test/index",
+    "pages/weather/toCitychoose/index"
+  ],
+  "subPackages": [
+    {
+      "root": "pagesBaidu",
+      "pages": [
+        "photoAnimal/photoAnimal",
+        "translate/translate",
+        "index/index",
+        "voice/index",
+        "transverter/transverter",
+        "cartoon/cartoon",
+        "newYear/newYear",
+        "compose/compose",
+        "faceScore/index"
+      ]
+    },
+    {
+      "root": "pagesTianxing",
+      "pages": [
+        "lucky/lucky/index",
+        "historyDay/historyDay",
+        "animal/animal",
+        "bename/bename",
+        "character/character",
+        "brains/brains",
+        "matching/matching"
+      ]
+    },
+    {
+      "root": "pagesOther",
+      "pages": [
+        "fortune/index/index",
+        "fortune/detail/detail",
+        "wishes/index/index",
+        "wishes/preview/preview",
+        "wishes/custom/custom",
+        "sleep/sleep/index",
+        "literature/index/index",
+        "literature/detail/detail",
+        "watermark/watermark",
+        "university/university",
+        "university/comparison/comparison",
+        "barrage/index",
+        "spoof/index/index",
+        "spoof/call/call",
+        "wallpaper/wallpaper",
+        "physique/physique"
+      ]
+    },
+    {
+      "root": "pagesHome",
+      "pages": [
+        "log/log",
+        "index/index",
+        "mobileInfo/mobileInfo"
+      ]
+    }
+  ],
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "selectedColor": "#0081ff",
+    "color": "#000",
+    "borderStyle": "white",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/tool/tool",
+        "text": "实用工具",
+        "iconPath": "/images/icon/tool.png",
+        "selectedIconPath": "/images/icon/tool1.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "个人中心",
+        "iconPath": "/images/icon/my.png",
+        "selectedIconPath": "/images/icon/my1.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "navBar": "/components/navBar/navBar",
+    "tui-icon": "/components/icon/icon",
+    "tui-tag": "/components/tag/tag",
+    "tui-modal": "/components/modals/modal",
+    "tui-bottom-popup": "/components/bottom-popup/bottom-popup",
+    "tui-tabs": "/components/tui-tabs/tui-tabs",
+    "tui-fab": "/components/tui-fab/tui-fab"
+  },
+  "sitemapLocation": "sitemap.json",
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "天气查询需要访问你的位置喔~"
+    }
+  }
+}

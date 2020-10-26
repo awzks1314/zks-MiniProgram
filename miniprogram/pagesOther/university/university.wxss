@@ -1,0 +1,23 @@
+
+page{
+  background: #f1f1f1;
+}
+.picker{
+  width: 30%;
+}
+.tophead{
+  position: fixed;
+  width: 100%;
+  border-bottom: 2rpx solid #eee;
+  background: #fff;
+}
+.libox{
+  overflow:hidden;
+}
+.ullii{
+  width: 50%;
+  padding: 10rpx 0;
+}
+.lii{
+  background: linear-gradient(to right,#4c9cfc,#586efe);
+}

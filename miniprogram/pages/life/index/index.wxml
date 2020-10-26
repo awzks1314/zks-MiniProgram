@@ -1,0 +1,14 @@
+<!--birth.wxml-->
+<view class="text">
+  <text>
+  <text class="title text-blue">人生只有900个月</text>
+  <!-- 一个30×30的表格 -->
+  每一个格子代表一个月
+  你的全部人生就在这个表格上
+  请珍惜每一天</text>
+</view>
+<view class="section flex justify-center">  
+  <picker mode="date" value="{{date}}" start="1900-01-01" end="{{today}}" bindchange="bindDateChange">      
+    <tui-tag >选择生日</tui-tag>
+  </picker>  
+</view> 

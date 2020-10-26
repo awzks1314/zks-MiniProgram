@@ -1,0 +1,11 @@
+<view class=''>
+    <navBar title='梦境' background='{{background}}'  backgroundColorTop='rgba(255,255,255,0)'  back="{{true}}" home="{{true}}"  bindback="handlerGobackClick" bindhome="handlerGohomeClick"></navBar>
+</view>
+
+<view class='nav-list padding'>
+  <navigator hover-class='none' url="../dreamDetailPage/dreamDetailPage?index={{index}}&name={{item.name}}" open-type="navigate" class="nav-li bg-blue" wx:for="{{groupData}}" wx:key='index'>
+    <view class="nav-title">{{item.name}}</view>
+    <view class="nav-name">{{item.title}}</view>
+    <tui-icon name='{{item.icon}}' class="nav-l" size="22" color="#fff"></tui-icon>
+  </navigator>
+</view>

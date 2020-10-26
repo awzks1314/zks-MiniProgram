@@ -1,0 +1,30 @@
+<view class="head bg-blue flex align-center flex-direction justify-center">
+  <view class='img-size-160 round margin-bottom-sm' style="overflow:hidden;" bindtap="changeHead">
+    <!-- <open-data type="userAvatarUrl" ></open-data> -->
+    <image src="{{url}}" class="img-size-160"></image>
+  </view>
+  <open-data type="userNickName" ></open-data>
+</view>
+<view class="hea">
+  <view class="box shadow2 bg-white radius-10 padding flex align-center justify-between">
+    <text class="text-xl text-bold text-blue">点</text>
+    <text class="text-xl text-bold text-green">击</text>
+    <text class="text-xl text-bold text-yellow">头</text>
+    <text class="text-xl text-bold text-orange">像</text>
+    <text class="text-xl text-bold text-red">随</text>
+    <text class="text-xl text-bold text-foot">机</text>
+    <text class="text-xl text-bold text-gray">换</text>
+  </view>
+</view>
+<view class="padding ">
+  <view class="radius-20  bg-white">
+    <view class="flex justify-between align-center height100 broder-bottom padding-lr-lg" wx:for='{{list}}' wx:key='index' bindtap="gotoUrl" data-url="{{item.url}}">
+      <view class="flex align-center">
+        <tui-icon name='{{item.icon}}' size="20" color="{{item.color}}" class="margin-right"></tui-icon>
+        <text class="text-gray text-lg">{{item.name}}</text>
+      </view>
+      <tui-icon name='arrowright' size="22"></tui-icon>
+    </view>
+  </view>
+</view>
+

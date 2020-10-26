@@ -1,0 +1,16 @@
+<!--pages/fortune-result.wxml-->
+<view>
+  <view>
+    <!--margin: 0;padding: 0;解决某些机型有边距出现的问题-->
+    <canvas canvas-id='myCanvas' style='width:100%;height:{{windowHeight-80}}px;margin: 0;padding: 0;display: block;'></canvas>
+  </view>
+
+  <view class='btn-wrap padding flex align-center justify-between' style='height:80px'>
+    <view class="round flex-sub text-center text-white padding-tb" style="border: 1px solid #FE97B7;" bindtap="returnIndex">
+      换个名字测
+    </view>
+    <view class="round flex-sub margin-left text-center text-white padding-tb" style="background-image: linear-gradient(-180deg, rgba(247,116,199,1.00) 0%, rgba(254,151,183,1.00) 100%);" bindtap="saveImage">
+      保存图片
+    </view>
+  </view>
+</view>

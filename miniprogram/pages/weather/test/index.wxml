@@ -1,0 +1,140 @@
+ <view class="tui-header-box">
+  <view class=" flex align-start" style="width:{{width}}px;height:{{height}}px">
+    <tui-icon name="arrowleft" color="#fff" tui-icon-class="tui-back" style="margin-top:{{arrowTop}}px" bindtap="handlerGobackClick"></tui-icon>
+    <view class="tui-searchbox flex align-center margin-right" style="margin-top:{{inputTop}}px"  wx:if='{{!bcgImgAreaShow}}'>
+      <icon type="search" size='13' color='#999'></icon>
+      <input class=" padding-left"  type="text" value="{{searchText}}" confirm-type='search' bindconfirm='commitSearch' wx:if="{{!searchKey}}" disabled='{{!enableSearch}}' placeholder="请输入城市名，快速查询天气信息"></input>
+    </view>
+  </view>   
+</view> 
+<view class="" style='margin-top: {{height}}px' >
+  <heartbeat id='heartbeat' wx:if='{{showHeartbeat}}'></heartbeat>
+  <image class='bcg' wx:if='{{bcgImg}}' src='{{bcgImg}}' mode='aspectFill'></image>
+  <view class='chooseBcg' wx:if='{{bcgImgAreaShow}}'>
+    <view class='top'>
+      <view class='title'>更换背景</view>
+      <view class='bcgs'>
+        <view class='border {{bcgImgIndex === index ? "active" : ""}}' wx:for='{{bcgImgList}}' wx:key='index'>
+          <image src='{{item.src}}' catchtap='chooseBcg' data-index='{{index}}' data-src='{{item.src}}'></image>
+        </view>  
+      </view>   
+    </view>
+    <view class='close' catchtap='hideBcgImgArea'>
+      <tui-icon name='up' color="#fff"></tui-icon>
+    </view>
+  </view>
+</view>
+
+<view class="content flex flex-direction align-center justify-center"style='margin-top: {{height}}px'  wx:if='{{!bcgImgAreaShow}}'>
+  <!-- <view catchtap='showBcgImgArea' class="text-right padding-right">
+    <text >更换背景</text>
+  </view> -->
+  
+  <view class="flex justify-center align-center" style="height:500rpx;" catchtap='showBcgImgArea'>
+    <view class='temp num flex align-center justify-center' decode='true' decode='true'>{{cityDatas.now.tmp || ''}}
+    </view>
+    <view class="flex flex-direction ">
+      <text style="font-size:50rpx;">℃</text>
+      <text style="font-size:50rpx;" class="margin-top-lg">{{cityDatas.now.cond_txt || '--'}}</text>
+    </view> 
+  </view>
+  <view class="flex align-center justify-center" bindtap="gotoChoose">
+    <tui-icon name='position' size="18" color='#FFF' ></tui-icon>
+    <text class="text-xxl text-bold text-white ">{{cityDatas.basic.location || '定位中'}}</text>
+    <tui-icon name='arrowdown' size="18" color='#FFF' ></tui-icon>
+  </view>  
+  <text class='time text-center' bindtap="gotoChoose" wx:if='{{cityDatas.updateTimeFormat}}'>{{cityDatas.updateTimeFormat}} 更新</text>
+  <view class='guide margin-top-lg'>
+    <view class="title   text-center padding-tb">今日实时天气</view>
+    <view class="flex flex-wrap align-center">
+      <view class='detail' wx:for='{{detailsDic.key}}' wx:key='index'>
+        <view>{{detailsDic.val[item]}}</view>
+        <view>{{cityDatas.now[item]}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='guide' wx:if='{{hourlyDatas.length}}'>
+    <view class='title text-center padding-tb'>今日每3小时实时天气</view>
+    <view class='hours'>
+      <swiper class="lii" indicator-dots="{{false}}" autoplay="{{false}}" circular="{{false}}" duration="300" next-margin="50rpx">
+        <block wx:for="{{hourlyDatas}}" wx:key="index">
+          <swiper-item>
+            <view class='hour flex flex-wrap align-center'>
+              <view class='detail'>
+                <view>温度(℃)</view>
+                <view>{{item.tmp}}</view>
+              </view>
+              <view class='detail'>
+                <view>天气</view>
+                <view class='weather'>
+                  <text>{{item.cond_txt}}</text>
+                  <image mode='widthFix' class="img-size-30" src='{{weatherIconUrl}}{{item.cond_code}}.png'></image>
+                </view>
+              </view>
+              <view class='detail'>
+                <view>相对湿度(%)</view>
+                <view>{{item.hum}}</view>
+              </view>
+              <view class='detail'>
+                <view>露点温度(℃)</view>
+                <view>{{item.dew}}</view>
+              </view>
+              <view class='detail'>
+                <view>降水概率</view>
+                <view>{{item.pop}}</view>
+              </view>
+              <view class='detail'>
+                <view>风向</view>
+                <view>{{item.wind_dir}}</view>
+              </view>
+              <view class='detail'>
+                <view>风向角度(deg)</view>
+                <view>{{item.wind_deg}}</view>
+              </view>
+              <view class='detail'>
+                <view>风力(级)</view>
+                <view>{{item.wind_sc}}</view>
+              </view>
+              <view class='detail'>
+                <view>风速(mk/h)</view>
+                <view>{{item.wind_spd}}</view>
+              </view>
+              <view class='detail'>
+                <view>气压(mb)</view>
+                <view>{{item.pres}}</view>
+              </view>
+              <view class='detail'>
+                <view>云量</view>
+                <view>{{item.cloud}}</view>
+              </view>
+            </view>
+            <view class='time text-center padding-tb-sm'>{{item.time}}</view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <view class='guide ' >
+    <view class=' flex flex-direction' wx:for='{{cityDatas.lifestyle}}' wx:key='index'>
+      <view class='itt flex-sub flex flex-direction justify-between align-start padding-tb margin-lr-lg'>
+        <view class='key'>{{lifestyles[item.type]}} {{item.brf}}</view>
+        <view class='value margin-top-sm'> {{item.txt}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 一周 -->
+  <view class="guide padding-bottom">
+    <view class="title  text-center padding-tb">未来一周天气</view>
+    <view class="guides">
+      <view wx:for='{{cityDatas.daily_forecast}}' wx:key='index' class="item">
+        <view>{{item.date}}</view>
+        <view class="padding-tb">{{item.tmp_max}}~{{item.tmp_min}}℃</view>
+        <view class="padding-tb flex align-center">
+          <text>{{item.cond_txt_d}}</text>
+          <image mode='widthFix' class="img-size-30 padding-left" src='{{weatherIconUrl}}{{item.cond_code_d}}.png'></image>
+        </view>
+        <view class="padding-tb">{{item.wind_dir}}{{item.wind_sc}}级</view>
+      </view>
+    </view>
+  </view>
+</view> 
